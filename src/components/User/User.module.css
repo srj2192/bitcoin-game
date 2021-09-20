@@ -1,0 +1,23 @@
+.title {
+    text-align: center;
+    display: block;
+    padding-top: 5%;
+    font-size: xx-large;
+    font-family: fantasy;
+    color: teal;
+}
+
+.label {
+    text-align: center;
+    font-family: fantasy;
+    font-size: x-large;
+    color: teal;
+}
+
+.form {
+    text-align: center;
+}
+
+.text {
+    margin-left: 5px;
+}

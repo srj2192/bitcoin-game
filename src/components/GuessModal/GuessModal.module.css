@@ -1,0 +1,39 @@
+.title {
+    text-align: center;
+    display: block;
+    font-size: xx-large;
+    font-family: fantasy;
+    color: teal;
+}
+
+.label {
+    text-align: center;
+    display: block;
+    font-size: x-large;
+    color: turquoise;
+}
+
+.name {
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    font-size: x-large;
+    color: turquoise;
+}
+
+.price {
+    text-align: center;
+    display: block;
+}
+
+.priceDollar {
+    color: teal;
+}
+
+.upbtn {
+    margin-left: 5px;
+}
+
+
+  
+ 
