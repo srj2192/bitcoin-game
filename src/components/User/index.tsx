@@ -66,7 +66,6 @@ export default class UserCreation extends React.Component<any, StateType> {
 
     render() {
         const {currentPrice, userName, userPoints, modalIsOpen} = this.state;
-        console.log(userPoints, "USER_POINTS");
         return (
             <div>
                 <div className={styles.title}>

@@ -30,6 +30,8 @@ const customStyles = {
   };
 
 export default class GuessModal extends React.Component<PropType, StateType> {
+    _timeoutInterval:number=60000;
+
     state: StateType = {
         guessAvailable: true,
         userPoints: ""
@@ -62,7 +64,7 @@ export default class GuessModal extends React.Component<PropType, StateType> {
                         }
                     })
                 }
-            }, 10000);
+            }, this._timeoutInterval);
         });
     }
 
@@ -87,7 +89,7 @@ export default class GuessModal extends React.Component<PropType, StateType> {
                         }
                     })
                 }
-            }, 10000);
+            }, this._timeoutInterval);
         });
     }
 
@@ -95,7 +97,6 @@ export default class GuessModal extends React.Component<PropType, StateType> {
         
         const {isModalOpen, currentprice, userName, onModalClose} = this.props;
         const { userPoints, guessAvailable } = this.state;
-        console.log("USER POINTS", userPoints);
         return(
             <Modal
                 isOpen={isModalOpen}
@@ -114,7 +115,7 @@ export default class GuessModal extends React.Component<PropType, StateType> {
                             <button onClick={this.downGuess}><i className="fa fa-arrow-down"></i></button>
                             <button onClick={this.upGuess} className={styles.upbtn}><i className="fa fa-arrow-up"></i></button>
                         </div>
-                    : <Countdown date={Date.now() + 10000} onComplete={onModalClose}/>}
+                    : <Countdown date={Date.now() + this._timeoutInterval} onComplete={onModalClose}/>}
                 </div>
                 <button onClick={onModalClose}>close</button>
             </Modal>
